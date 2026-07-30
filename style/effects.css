@@ -1,0 +1,120 @@
+/* ============================================================
+   BIT-BY-BIT GAME JAM — effects.css
+   Scanlines, vignette, glitch + blink keyframes
+   ============================================================ */
+
+/* ---------- CRT scanlines ---------- */
+
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+/* ---------- vignette ---------- */
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+/* ---------- rec dot blink ---------- */
+
+.rec__dot {
+  animation: blink 1.6s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0.15; }
+}
+
+/* ---------- digit glitch (triggered via JS by adding .is-glitching) ---------- */
+
+.clock__value.is-glitching {
+  animation: digit-glitch 140ms steps(2);
+  color: var(--color-danger);
+  text-shadow: 0 0 8px rgba(138, 3, 3, 0.6);
+}
+
+@keyframes digit-glitch {
+  0%   { transform: translate(0, 0); }
+  30%  { transform: translate(-1px, 1px); }
+  60%  { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ---------- full-panel static flash (triggered via JS) ---------- */
+
+.static-flash.is-flashing {
+  animation: static-flash 450ms steps(3) forwards;
+}
+
+@keyframes static-flash {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.9; }
+  70%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* ---------- monitor-wide glitch shudder (rare, bigger trigger) ---------- */
+
+.monitor.is-shuddering {
+  animation: shudder 220ms linear;
+}
+
+@keyframes shudder {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-2px, 1px); }
+  40%  { transform: translate(2px, -1px); }
+  60%  { transform: translate(-1px, 2px); }
+  80%  { transform: translate(1px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ---------- tagline swap flicker (idle-return trigger) ---------- */
+
+.tagline.is-flickering {
+  animation: text-flicker 260ms steps(4);
+}
+
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.1; }
+}
+
+/* ---------- cam label swap ---------- */
+
+.cam-label.is-swapped {
+  color: var(--color-danger);
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .rec__dot,
+  .clock__value.is-glitching,
+  .static-flash.is-flashing,
+  .monitor.is-shuddering,
+  .tagline.is-flickering {
+    animation: none !important;
+  }
+}

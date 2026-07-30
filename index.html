@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bit-By-Bit Game Jam — Signal Incoming</title>
+<meta name="description" content="Something is transmitting. Coming soon.">
+
+<!--
+  transmission log — freq 03
+  subject does not know it yet.
+  reference point: 08:00, 24.08
+  do not rewind past frame 13.
+-->
+<meta name="transmission" content="LOOP:13 // OFFSET:-6 // STATUS:UNSTABLE">
+
+<link rel="stylesheet" href="style/main.css">
+<link rel="stylesheet" href="style/effects.css">
+</head>
+<body>
+
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <main class="monitor" role="main">
+
+    <!-- camera frame corners -->
+    <span class="corner corner--tl" aria-hidden="true"></span>
+    <span class="corner corner--tr" aria-hidden="true"></span>
+    <span class="corner corner--bl" aria-hidden="true"></span>
+    <span class="corner corner--br" aria-hidden="true"></span>
+
+    <header class="monitor__bar">
+      <div class="rec" aria-hidden="true">
+        <span class="rec__dot"></span>
+        <span class="rec__label">REC</span>
+      </div>
+      <button id="camLabel" class="cam-label" type="button" aria-label="Camera feed identifier">
+        CAM&nbsp;01
+      </button>
+    </header>
+
+    <div class="monitor__body">
+      <h1 class="title">
+        <span class="title__line title__line--jam">BIT-BY-BIT</span>
+        <span class="title__line title__line--sub">GAME JAM</span>
+      </h1>
+
+      <p class="tagline" id="tagline">SIGNAL INCOMING</p>
+
+      <div class="clock" id="clock" aria-live="off">
+        <div class="clock__unit">
+          <span class="clock__value" id="clockDays">00</span>
+          <span class="clock__label">DAYS</span>
+        </div>
+        <span class="clock__colon" aria-hidden="true">:</span>
+        <div class="clock__unit">
+          <span class="clock__value" id="clockHours">00</span>
+          <span class="clock__label">HRS</span>
+        </div>
+        <span class="clock__colon" aria-hidden="true">:</span>
+        <div class="clock__unit">
+          <span class="clock__value" id="clockMinutes">00</span>
+          <span class="clock__label">MIN</span>
+        </div>
+        <span class="clock__colon" aria-hidden="true">:</span>
+        <div class="clock__unit">
+          <span class="clock__value" id="clockSeconds">00</span>
+          <span class="clock__label">SEC</span>
+        </div>
+      </div>
+
+      <p class="clock__target">TRANSMISSION RESUMES 08.24 · 08:00</p>
+
+      <nav class="socials" aria-label="Social links (coming soon)">
+        <a class="social social--disabled" href="#" tabindex="-1" aria-disabled="true" data-social="instagram">
+          <span class="social__glyph" aria-hidden="true">◍</span>
+          <span class="social__name">Instagram</span>
+        </a>
+        <a class="social social--disabled" href="#" tabindex="-1" aria-disabled="true" data-social="github">
+          <span class="social__glyph" aria-hidden="true">◍</span>
+          <span class="social__name">GitHub</span>
+        </a>
+        <a class="social social--disabled" href="#" tabindex="-1" aria-disabled="true" data-social="whatsapp">
+          <span class="social__glyph" aria-hidden="true">◍</span>
+          <span class="social__name">WhatsApp</span>
+        </a>
+      </nav>
+    </div>
+
+    <footer class="monitor__footer">
+      <span id="systemId" class="system-id">SYS//0x00 · AWAITING SYNC</span>
+    </footer>
+
+    <img id="staticFlash" class="static-flash" src="public/images/static.gif" alt="" aria-hidden="true">
+
+    <div class="hidden-frame" id="hiddenFrame" aria-hidden="true"></div>
+
+  </main>
+
+  <button id="audioToggle" class="audio-toggle" type="button" aria-pressed="false">
+    <span class="audio-toggle__icon" aria-hidden="true">▮▮</span>
+    <span class="audio-toggle__text">AUDIO</span>
+  </button>
+
+  <audio id="ambientAudio" src="public/audio/ambient-loop.mp3" preload="none" loop></audio>
+  <audio id="staticBurst" src="public/audio/static-burst.mp3" preload="none"></audio>
+
+  <script src="scripts/countdown.js"></script>
+  <script src="scripts/clues.js"></script>
+  <script src="scripts/audio.js"></script>
+</body>
+</html>
