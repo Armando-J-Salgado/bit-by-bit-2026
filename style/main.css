@@ -47,11 +47,13 @@ body {
   color: var(--color-text);
   font-family: var(--font-mono);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
-  padding: 24px;
-  overflow: hidden;
+  padding: 32px 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -304,10 +306,234 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* ---------- sections & headings ---------- */
+
+.section {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--color-panel-edge);
+  text-align: left;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 4vw, 20px);
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+  text-shadow: 0 0 12px rgba(255, 176, 0, 0.2);
+}
+
+.section-subtitle {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--color-text);
+  letter-spacing: 0.12em;
+  margin: 24px 0 12px;
+  opacity: 0.9;
+}
+
+/* ---------- section 2: inscription button ---------- */
+
+.section--inscription {
+  text-align: center;
+}
+
+.inscription-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 20px;
+  background: rgba(255, 176, 0, 0.05);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  box-shadow: 0 0 15px rgba(255, 176, 0, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.inscription-btn:hover {
+  background: var(--color-accent);
+  color: #000;
+  box-shadow: 0 0 25px rgba(255, 176, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.inscription-btn__icon {
+  font-size: 14px;
+}
+
+.inscription-btn__text {
+  font-family: var(--font-display);
+  font-size: clamp(14px, 3.5vw, 18px);
+  letter-spacing: 0.08em;
+  font-weight: bold;
+}
+
+.inscription-btn__sub {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+/* ---------- section 3: dates & schedule ---------- */
+
+.dates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.date-card {
+  background: rgba(12, 10, 8, 0.8);
+  border: 1px solid var(--color-panel-edge);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.date-card:hover {
+  border-color: var(--color-accent-dim);
+}
+
+.date-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.date-card__stage {
+  font-family: var(--font-display);
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+}
+
+.date-card__status {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-muted);
+}
+
+.date-card__status.badge--upcoming {
+  color: var(--color-accent);
+  background: rgba(255, 176, 0, 0.1);
+  border: 1px solid var(--color-accent-dim);
+}
+
+.date-card__time {
+  font-size: 13px;
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.date-card__note {
+  font-size: 11px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ---------- section 4: rules & instructions ---------- */
+
+.rules-list,
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rule-item,
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-left: 2px solid var(--color-accent-dim);
+}
+
+.rule-item__prefix {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.instruction-item__icon {
+  color: var(--color-accent);
+}
+
+/* ---------- section 5: prizes ---------- */
+
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.prize-card {
+  background: rgba(20, 16, 12, 0.9);
+  border: 1px solid var(--color-accent-dim);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.prize-card--rank-01 {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(255, 176, 0, 0.15), inset 0 0 10px rgba(255, 176, 0, 0.05);
+}
+
+.prize-card__badge {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.prize-card__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: var(--color-text);
+}
+
+.prize-card__reward {
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.prize-card__desc {
+  font-size: 11px;
+  color: var(--color-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 420px) {
   .clock { gap: 6px; }
   .clock__unit { min-width: 44px; }
   .socials { gap: 14px; }
+  .prizes-grid { grid-template-columns: 1fr; }
 }

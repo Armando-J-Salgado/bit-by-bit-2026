@@ -7,8 +7,8 @@
 (function () {
   'use strict';
 
-  // Monday, August 24th, 8:00 AM, El Salvador time (UTC-6), fixed offset.
-  var TARGET = new Date('2026-08-24T08:00:00-06:00').getTime();
+  // Tuesday, September 8th, 12:00 AM (midnight), El Salvador time (UTC-6)
+  var TARGET = new Date('2026-09-08T00:00:00-06:00').getTime();
 
   var els = {
     days: document.getElementById('clockDays'),

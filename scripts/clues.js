@@ -103,7 +103,7 @@
             var away = Date.now() - awayAt;
             if (away > IDLE_THRESHOLD_MS) {
               flashStatic();
-              revealLine('WELCOME BACK', 2200);
+              revealLine('BIENVENIDO DE NUEVO', 2200);
               systemId.textContent = 'SYS//0x00 · GAP LOGGED (' + Math.round(away / 1000) + 's)';
               window.setTimeout(function () {
                 systemId.textContent = 'SYS//0x00 · AWAITING SYNC';
@@ -181,11 +181,57 @@
             scheduleNext();
           }, delay);
         }
-        scheduleNext();
+      }
+    },
+
+    // 7. section header scramble on hover
+    {
+      id: 'section-scramble',
+      trigger: function () {
+        var headers = document.querySelectorAll('.section-title');
+        var glyphs = '0123456789ABCDEF#%@&!';
+
+        headers.forEach(function (h) {
+          var original = h.textContent;
+          var scrambling = false;
+
+          h.addEventListener('mouseenter', function () {
+            if (scrambling || Math.random() > 0.4) return;
+            scrambling = true;
+            var ticks = 0;
+            var interval = window.setInterval(function () {
+              var scrambled = original.split('').map(function (ch) {
+                if (ch === ' ' || ch === '//' || ch === ':') return ch;
+                return glyphs[Math.floor(Math.random() * glyphs.length)];
+              }).join('');
+              h.textContent = scrambled;
+              h.classList.add('is-glitching');
+              ticks++;
+              if (ticks > 5) {
+                window.clearInterval(interval);
+                h.textContent = original;
+                h.classList.remove('is-glitching');
+                scrambling = false;
+              }
+            }, 60);
+          });
+        });
+      }
+    },
+
+    // 8. inscription button static burst on hover
+    {
+      id: 'inscription-hover',
+      trigger: function () {
+        var btn = document.getElementById('inscriptionBtn');
+        if (!btn) return;
+        btn.addEventListener('mouseenter', function () {
+          if (Math.random() < 0.35) {
+            flashStatic();
+          }
+        });
       }
     }
-
-    // ---- future clues go here. push a new { id, trigger } object. ----
   ];
 
   CLUES.forEach(function (clue) {
