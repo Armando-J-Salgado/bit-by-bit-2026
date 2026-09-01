@@ -430,6 +430,12 @@ button:focus-visible {
   border: 1px solid var(--color-accent-dim);
 }
 
+.date-card__status.badge--abierto {
+  color: var(--color-accent);
+  background: rgba(255, 176, 0, 0.1);
+  border: 1px solid var(--color-accent-dim);
+}
+
 .date-card__time {
   font-size: 13px;
   color: var(--color-accent);

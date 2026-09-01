@@ -1,19 +1,19 @@
 {
-  "inscriptionUrl": "https://forms.cloud.microsoft/r/dyCKBHmsw2",
-  "inscriptionLabel": "[ INSCRIBITE AHORA // UNETE A LA TRANSMISIÓN ]",
+  "inscriptionUrl": "https://sdmntprcentralus.oaiusercontent.com/files/00000000-00ac-81f5-930b-4f8fe531b476/raw?se=2026-09-01T12%3A56%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=4e52dfe3-3412-4bfd-a603-7d399fcd549b&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-31T21%3A52%3A22Z&ske=2026-09-01T21%3A52%3A22Z&sks=b&skv=2026-02-06&sig=7BvUQy6KcJnBNtU7dESOgMalJ9nG44hezeHWwGdmSUI%3D",
+  "inscriptionLabel": "¿QUÉ NO ESPERA A NADIE?",
   "dates": [
     {
       "id": "fecha-01",
       "stage": "CIERRE DE INSCRIPCIONES",
       "date": "1 de Septiembre del 2026 — 11:59 AM",
-      "status": "ABIERTO",
+      "status": "CERRADO",
       "note": "Último día para aceptar la misión. Prestad atención a los mensajes"
     },
     {
       "id": "fecha-02",
       "stage": "LANZAMIENTO & REVELACIÓN / ENTREGA DE CONCEPTO ",
       "date": "2 de Septiembre del 2026 — 11:59 PM",
-      "status": "PRÓXIMAMENTE",
+      "status": "ABIERTO",
       "note": "Unéte a la transmisión, descubre el tema secreto y envía tu idea"
     },
     {

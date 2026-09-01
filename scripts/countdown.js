@@ -8,7 +8,7 @@
   'use strict';
 
   // Tuesday, September 8th, 12:00 AM (midnight), El Salvador time (UTC-6)
-  var TARGET = new Date('2026-09-08T00:00:00-06:00').getTime();
+  var TARGET = new Date('2026-09-08T07:00:00-06:00').getTime();
 
   var els = {
     days: document.getElementById('clockDays'),
