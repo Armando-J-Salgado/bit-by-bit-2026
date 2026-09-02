@@ -1,6 +1,6 @@
 {
-  "inscriptionUrl": "https://drive.google.com/file/d/1P6PajH_D-4ig0z2DedY65rDlkIDM3Ezs/view?usp=sharing",
-  "inscriptionLabel": "¿QUÉ NO ESPERA A NADIE?",
+  "inscriptionUrl": "https://drive.google.com/file/d/1wibobIp0MKQyQ4095Djk_-oJxDBkbBbj/view?usp=sharing",
+  "inscriptionLabel": "¿BUSCAS HERRAMIENTAS?",
   "dates": [
     {
       "id": "fecha-01",
@@ -13,14 +13,14 @@
       "id": "fecha-02",
       "stage": "LANZAMIENTO & REVELACIÓN / ENTREGA DE CONCEPTO ",
       "date": "1 de Septiembre del 2026 — 11:59 PM",
-      "status": "ABIERTO",
+      "status": "CERRADO",
       "note": "Unéte a la transmisión, descubre el tema secreto y envía tu idea"
     },
     {
       "id": "fecha-03",
       "stage": "TECH-DAY / ENTREGA DE DISEÑO MÉCANICAS Y TECNOLOGÍA",
       "date": "2 de Septiembre del 2026 — 11:59 PM",
-      "status": "PENDIENTE",
+      "status": "ABIERTO",
       "note": "¿Qué tecnología usarán? ¡Que comience el juego!"
     },
     {
