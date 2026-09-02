@@ -5,35 +5,35 @@
     {
       "id": "fecha-01",
       "stage": "CIERRE DE INSCRIPCIONES",
-      "date": "1 de Septiembre del 2026 — 11:59 AM",
+      "date": "31 de Agosto del 2026 — 11:59 AM",
       "status": "CERRADO",
       "note": "Último día para aceptar la misión. Prestad atención a los mensajes"
     },
     {
       "id": "fecha-02",
       "stage": "LANZAMIENTO & REVELACIÓN / ENTREGA DE CONCEPTO ",
-      "date": "2 de Septiembre del 2026 — 11:59 PM",
+      "date": "1 de Septiembre del 2026 — 11:59 PM",
       "status": "ABIERTO",
       "note": "Unéte a la transmisión, descubre el tema secreto y envía tu idea"
     },
     {
       "id": "fecha-03",
       "stage": "TECH-DAY / ENTREGA DE DISEÑO MÉCANICAS Y TECNOLOGÍA",
-      "date": "3 de Septiembre del 2026 — 11:59 PM",
+      "date": "2 de Septiembre del 2026 — 11:59 PM",
       "status": "PENDIENTE",
       "note": "¿Qué tecnología usarán? ¡Que comience el juego!"
     },
     {
       "id": "fecha-04",
       "stage": "ASSETS & HUD MAYHEM / ENTREGA DE DISEÑO VISUAL",
-      "date": "4 de Septiembre del 2026 — 11:59 PM",
+      "date": "3 de Septiembre del 2026 — 11:59 PM",
       "status": "PENDIENTE",
       "note": "Usa tus mejores herramientas para traer a la vida tu creación"
     },
     {
       "id": "fecha-05",
       "stage": "AUDIOS & EFECTOS DE SONIDO / ENTREGA DE DISEÑO AUDITIVO",
-      "date": "5 de Septiembre del 2026 — 11:59 PM",
+      "date": "4 de Septiembre del 2026 — 11:59 PM",
       "status": "PENDIENTE",
       "note": "Casi llega la hora del evento final... ¡Transmite tus últimas piezas!"
     },
