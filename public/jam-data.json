@@ -1,6 +1,6 @@
 {
-  "inscriptionUrl": "https://www.youtube.com/watch?v=v-ibXM3xBjg&t=75s",
-  "inscriptionLabel": "¿QUÉ PUEDES VER?",
+  "inscriptionUrl": "https://www.youtube.com/watch?v=7vtAdErA-W0",
+  "inscriptionLabel": "LISTEN CAREFULLY",
   "dates": [
     {
       "id": "fecha-01",
@@ -27,14 +27,14 @@
       "id": "fecha-04",
       "stage": "ASSETS & HUD MAYHEM / ENTREGA DE DISEÑO VISUAL",
       "date": "3 de Septiembre del 2026 — 11:59 PM",
-      "status": "ABIERTO",
+      "status": "CERRADO",
       "note": "Usa tus mejores herramientas para traer a la vida tu creación"
     },
     {
       "id": "fecha-05",
       "stage": "AUDIOS & EFECTOS DE SONIDO / ENTREGA DE DISEÑO AUDITIVO",
       "date": "4 de Septiembre del 2026 — 11:59 PM",
-      "status": "PENDIENTE",
+      "status": "ABIERTO",
       "note": "Casi llega la hora del evento final... ¡Transmite tus últimas piezas!"
     },
     {
